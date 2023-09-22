@@ -29,7 +29,7 @@ uint64_t user_hash(const void *item, uint64_t seed0, uint64_t seed1) {
     return hashmap_sip(user->name, user->len, seed0, seed1);
 }
 
-int main() {
+int sharemap_test() {
     // create a new hash map where each item is a `struct user`. The second
     // argument is the initial capacity. The third and fourth arguments are 
     // optional seeds that are passed to the following hash function.
@@ -45,7 +45,7 @@ int main() {
     struct user *user; 
     
     printf("\n-- get some users --\n");
-    user = hashmap_get(map, &(struct user){ .name="Jane", .len=4 });
+    user = hashmap_get(map, &(struct user){ .name="Jane", .len=4});
     printf("%s age=%d\n", user->name, user->age);
 
     user = hashmap_get(map, &(struct user){ .name="Roger", .len=5});
