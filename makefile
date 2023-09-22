@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Wall
 TARGET=sharemap
-SRC=example.c hashmap.c
+SRC=sharemap.c hashmap.c
 
 all: $(TARGET)
 
